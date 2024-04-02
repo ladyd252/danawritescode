@@ -1,0 +1,18 @@
+---
+layout: layout.html
+---
+{% for post in collections.post reversed %}
+<article class="limited-width-70">
+    <a href="{{ post.url }}"><h2 class="roboto-bold">{{ post.data.title }}</h2></a>
+    <time>{{ post.data.publish_date }}</time>
+    <br/>
+    <div class="top-margin-12">
+        {{ post.data.preview_text }}
+    </div>
+    <a href="{{ post.url }}">More</a>
+    {% unless forloop.last %}
+        <hr/>
+    {% endunless %}
+</article>
+    
+{% endfor %}

@@ -1,0 +1,171 @@
+body {
+  line-height: 1.75;
+}
+
+a {
+  color: inherit;
+}
+
+h1 > a, nav > a {
+   text-decoration: none;
+}
+
+hr {
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+.flex {
+  display: flex;
+}
+ 
+.justify-center {
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.limited-width-90 {
+  width: 90vw;
+}
+
+.limited-width-70 {
+  width: 70vw;
+}
+
+@property --color-dark {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: #272635;
+}
+
+@property --color-light-pink {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: #EFD2CB;
+}
+
+@property --color-pink {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: #cf3a69;
+}
+
+@property --color-orange {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: #ee9480;
+}
+
+@property --color-white {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: #ffffff;
+}
+
+.pink-text {
+  color: var(--color-pink);
+}
+
+.dark-text {
+  color: var(--color-dark);
+}
+
+.orange-text {
+  color: var(--color-orange);
+}
+
+.roboto-thin {
+    font-family: "Roboto", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+  }
+  
+  .roboto-light {
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+  body, .roboto-regular {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .roboto-medium {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+  h2, .roboto-bold {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    margin-bottom: 0; 
+  }
+  
+  .roboto-black {
+    font-family: "Roboto", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+  }
+  
+  .roboto-thin-italic {
+    font-family: "Roboto", sans-serif;
+    font-weight: 100;
+    font-style: italic;
+  }
+  
+  .roboto-light-italic {
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: italic;
+  }
+  
+  .roboto-regular-italic {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+  }
+  
+  .roboto-medium-italic {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: italic;
+  }
+  
+  .roboto-bold-italic {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+  }
+  
+  .roboto-black-italic {
+    font-family: "Roboto", sans-serif;
+    font-weight: 900;
+    font-style: italic;
+  }
+
+.bungee-regular {
+  font-family: "Bungee", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+time {
+  font-size: small;
+  color: var(--color-dark);
+  font-weight: 600;
+}
+
+.top-margin-12 {
+  margin-top: 12px;
+}

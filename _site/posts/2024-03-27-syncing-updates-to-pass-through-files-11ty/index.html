@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/bundle.css">
+  <link href="https://unpkg.com/prismjs@v1.x/themes/prism.css" rel="stylesheet" />
+  <style>
+        .expandableDiv {
+  align-items: center;
+  background-color: #72d4d4;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  padding: 10px;
+  width: 200px;
+
+  &:hover {
+    width: 400px;
+  }
+
+  &.smooth {
+    transition: width 200ms;
+  }
+
+  &.long {
+    transition: width 2s;
+  }
+
+  &.short {
+    transition: width 100ms;
+  }
+
+  &.easeIn {
+    transition: width 1s ease-in;
+  }
+
+  &.easeOut {
+    transition: width 1s ease-out;
+  }
+
+  &.cubicBezier {
+    transition: width 1s cubic-bezier(0.2, 0.6, 0.3, 0.9);
+  }
+
+  &.delayed {
+    height: 100px;
+    transition: width 0.25s ease-in, background-color 0.25s ease-in 0.25s,
+      color 0.25s ease-in 0.25s;
+    &:hover {
+      background-color: #2e9898;
+      color: #ffffff;
+    }
+  }
+}
+
+// general styling
+
+h2 {
+  margin-top: 48px;
+}
+
+.heightTransition {
+  align-items: center;
+  background-color: #72d4d4;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  height: 100px;
+  justify-content: center;
+  margin: auto;
+  padding: 10px;
+  transition: height 200ms;
+  width: 200px;
+
+  &:hover {
+    height: 200px;
+  }
+}
+
+.opacityTransition {
+  align-items: center;
+  background-color: #72d4d4;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  opacity: 0.6;
+  padding: 10px;
+  transition: opacity 200ms;
+  width: 200px;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.borderTransition {
+  align-items: center;
+  background-color: #72d4d4;
+  border: 4px solid lightgray;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  padding: 10px;
+  transition: border 200ms;
+  width: 200px;
+
+  &:hover {
+    border: 4px solid black;
+  }
+}
+
+  </style>
+</head>
+<body>
+    <script src="https://unpkg.com/prismjs@v1.x/components/prism-core.min.js"></script>
+	<script src="https://unpkg.com/prismjs@v1.x/plugins/autoloader/prism-autoloader.min.js"></script>
+    <header class="flex justify-center">
+        <div class="limited-width-70">
+            <div class="flex justify-between align-center">
+                <h1 class="bungee-regular"><a href="/"><span class="pink-text">Dana</span><span class="dark-text">Writes</span><span class="orange-text">Code</span></a></h1>
+                <nav class="bungee-regular"><a href="/about">About</a></nav>
+            </div>
+        </div>
+    </header>
+    <main class="flex justify-center">
+        <div class="limited-width-70">
+            <h2>Syncing updates to passthrough files in 11ty</h2>
+            <time>March 27, 2024</time>
+            <article>
+                <p>A quick note in case you run into this issue as I did. I was adding a css file to my blog and set up a <strong>.eleventy.js</strong> file with the lines</p>
+<pre class="language-javascript"><code class="language-javascript">
+module<span class="token punctuation">.</span><span class="token function-variable function">exports</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">eleventyConfig</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    eleventyConfig<span class="token punctuation">.</span><span class="token function">addPassthroughCopy</span><span class="token punctuation">(</span><span class="token string">"bundle.css"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span></code></pre>
+<p>as described in the <a href="https://www.11ty.dev/docs/assets/">11ty docs</a>. This added the styles to my blog, however when I updated the css file, despite having <code>npx @11ty/eleventy --serve</code> running, I didn't see my changes reflected.</p>
+<p>This is easily fixed by updating my <strong>.eleventy.js</strong> file to</p>
+<pre class="language-javascript"><code class="language-javascript">module<span class="token punctuation">.</span><span class="token function-variable function">exports</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">eleventyConfig</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    eleventyConfig<span class="token punctuation">.</span><span class="token function">addPassthroughCopy</span><span class="token punctuation">(</span><span class="token string">"bundle.css"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    eleventyConfig<span class="token punctuation">.</span><span class="token function">addWatchTarget</span><span class="token punctuation">(</span><span class="token string">"bundle.css"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span></code></pre>
+<p>There are other ways to apply styles to your 11ty site - let me know if you prefer a different way or if this post helped you.</p>
+
+            </article>
+        </div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,109 @@
+.expandableDiv {
+  align-items: center;
+  background-color: #72d4d4;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  padding: 10px;
+  width: 200px;
+
+  &:hover {
+    width: 400px;
+  }
+
+  &.smooth {
+    transition: width 200ms;
+  }
+
+  &.long {
+    transition: width 2s;
+  }
+
+  &.short {
+    transition: width 100ms;
+  }
+
+  &.easeIn {
+    transition: width 1s ease-in;
+  }
+
+  &.easeOut {
+    transition: width 1s ease-out;
+  }
+
+  &.cubicBezier {
+    transition: width 1s cubic-bezier(0.2, 0.6, 0.3, 0.9);
+  }
+
+  &.delayed {
+    height: 100px;
+    transition: width 0.25s ease-in, background-color 0.25s ease-in 0.25s,
+      color 0.25s ease-in 0.25s;
+    &:hover {
+      background-color: #2e9898;
+      color: #ffffff;
+    }
+  }
+}
+
+// general styling
+
+h2 {
+  margin-top: 48px;
+}
+
+.heightTransition {
+  align-items: center;
+  background-color: #72d4d4;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  height: 100px;
+  justify-content: center;
+  margin: auto;
+  padding: 10px;
+  transition: height 200ms;
+  width: 200px;
+
+  &:hover {
+    height: 200px;
+  }
+}
+
+.opacityTransition {
+  align-items: center;
+  background-color: #72d4d4;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  opacity: 0.6;
+  padding: 10px;
+  transition: opacity 200ms;
+  width: 200px;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.borderTransition {
+  align-items: center;
+  background-color: #72d4d4;
+  border: 4px solid lightgray;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  padding: 10px;
+  transition: border 200ms;
+  width: 200px;
+
+  &:hover {
+    border: 4px solid black;
+  }
+}

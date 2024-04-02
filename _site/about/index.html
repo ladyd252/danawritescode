@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/bundle.css">
+  <link href="https://unpkg.com/prismjs@v1.x/themes/prism.css" rel="stylesheet" />
+  <style>
+        .expandableDiv {
+  align-items: center;
+  background-color: #72d4d4;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  padding: 10px;
+  width: 200px;
+
+  &:hover {
+    width: 400px;
+  }
+
+  &.smooth {
+    transition: width 200ms;
+  }
+
+  &.long {
+    transition: width 2s;
+  }
+
+  &.short {
+    transition: width 100ms;
+  }
+
+  &.easeIn {
+    transition: width 1s ease-in;
+  }
+
+  &.easeOut {
+    transition: width 1s ease-out;
+  }
+
+  &.cubicBezier {
+    transition: width 1s cubic-bezier(0.2, 0.6, 0.3, 0.9);
+  }
+
+  &.delayed {
+    height: 100px;
+    transition: width 0.25s ease-in, background-color 0.25s ease-in 0.25s,
+      color 0.25s ease-in 0.25s;
+    &:hover {
+      background-color: #2e9898;
+      color: #ffffff;
+    }
+  }
+}
+
+// general styling
+
+h2 {
+  margin-top: 48px;
+}
+
+.heightTransition {
+  align-items: center;
+  background-color: #72d4d4;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  height: 100px;
+  justify-content: center;
+  margin: auto;
+  padding: 10px;
+  transition: height 200ms;
+  width: 200px;
+
+  &:hover {
+    height: 200px;
+  }
+}
+
+.opacityTransition {
+  align-items: center;
+  background-color: #72d4d4;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  opacity: 0.6;
+  padding: 10px;
+  transition: opacity 200ms;
+  width: 200px;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.borderTransition {
+  align-items: center;
+  background-color: #72d4d4;
+  border: 4px solid lightgray;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  padding: 10px;
+  transition: border 200ms;
+  width: 200px;
+
+  &:hover {
+    border: 4px solid black;
+  }
+}
+
+  </style>
+</head>
+<body>
+    <script src="https://unpkg.com/prismjs@v1.x/components/prism-core.min.js"></script>
+	<script src="https://unpkg.com/prismjs@v1.x/plugins/autoloader/prism-autoloader.min.js"></script>
+    <header class="flex justify-center">
+        <div class="limited-width-70">
+            <div class="flex justify-between align-center">
+                <h1 class="bungee-regular"><a href="/"><span class="pink-text">Dana</span><span class="dark-text">Writes</span><span class="orange-text">Code</span></a></h1>
+                <nav class="bungee-regular"><a href="/about">About</a></nav>
+            </div>
+        </div>
+    </header>
+    <main class="flex justify-center">
+        <div class="limited-width-70">
+            <h2></h2>
+            <time></time>
+            <article>
+                <h3>Hi! My name is Dana and I'm a software engineer.</h3>
+<p>In December 2014 I decided to join a coding bootcamp and started my journey as a software engineer.</p>
+<p>Since then, I've worked on various product teams, most recently at Pinterest. Being part of user facing feature teams pushed me to think about how to increase feature engagement and adoption. I love the challenge of thinking about product decisions through the lens of the user.</p>
+<p>Along the way, I’ve also had the opportunity to mentor other engineers who were starting a career in software. This is part of my inspiration to start this blog. Here, I will try to break down programming concepts and discuss some of the skills I’ve had to sharpen to progress in my career.</p>
+<p>These days, I'm spending lots of time with baby and toddler. In my (little) spare time, I enjoy baking and holding baby alpacas.</p>
+<br/>
+<p><img src="/assets/images/dana_and_baby_alpaca.jpg" alt="Dana holding a baby alpaca"></p>
+
+            </article>
+        </div>
+    </main>
+</body>
+</html>
