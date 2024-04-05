@@ -4,6 +4,10 @@ publish_date: "October 14, 2019"
 date: 2019-10-14
 preview_text: Recently I’ve been working with more transitions and animations at work and on my personal project, and I find them to be a pretty confusing topic that tends to trip people (me) up. So I thought I'd take a stab at breaking these down...
 ---
+  <style>
+        {% include "assets/styles/2019-10-14-css-transitions-post.css" %}
+  </style>
+  
 Recently I’ve been working with more transitions and animations at work and on my personal project, and I find them to be a pretty confusing topic that tends to trip people (me) up. So I thought I'd take a stab at breaking these down!&nbsp;
 
 ### What are CSS transitions?
