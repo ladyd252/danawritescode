@@ -15,22 +15,22 @@
 <body>
     <script src="https://unpkg.com/prismjs@v1.x/components/prism-core.min.js"></script>
 	<script src="https://unpkg.com/prismjs@v1.x/plugins/autoloader/prism-autoloader.min.js"></script>
-    <header class="flex justify-center">
-        <div class="limited-width-70">
-            <div class="flex justify-between align-center">
-                <h1 class="bungee-regular"><a href="/"><span class="pink-text">Dana</span><span class="dark-text">Writes</span><span class="orange-text">Code</span></a></h1>
-                <nav class="bungee-regular"><a href="/about">About</a></nav>
-            </div>
+    <div class="flex direction-column align-center">
+        <div class="limited-width">
+            <header>
+                <div class="flex justify-between align-center">
+                    <h1 class="bungee-regular"><a href="/"><span class="pink-text">Dana</span><span class="dark-text">Writes</span><span class="orange-text">Code</span></a></h1>
+                    <nav class="bungee-regular"><a href="/about">About</a></nav>
+                </div>
+            </header>
+            <main class="flex justify-center">
+                <article>
+                    <h2>{{ title }}</h2>
+                    <time>{{ publish_date }}</time>
+                    {{ content }}
+                </article>
+            </main>
         </div>
-    </header>
-    <main class="flex justify-center">
-        <div class="limited-width-70">
-            <h2>{{ title }}</h2>
-            <time>{{ publish_date }}</time>
-            <article>
-                {{ content }}
-            </article>
-        </div>
-    </main>
+    </div>
 </body>
 </html>

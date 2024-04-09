@@ -1,5 +1,6 @@
 body {
   line-height: 1.75;
+  margin-bottom: 48px;
 }
 
 a {
@@ -31,12 +32,8 @@ hr {
   align-items: center;
 }
 
-.limited-width-90 {
-  width: 90vw;
-}
-
-.limited-width-70 {
-  width: 70vw;
+.direction-column {
+  flex-direction: column;
 }
 
 @property --color-dark {
@@ -168,4 +165,8 @@ time {
 
 .top-margin-12 {
   margin-top: 12px;
+}
+
+.limited-width {
+  max-width: 80ch
 }
