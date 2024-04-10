@@ -2,7 +2,7 @@
 title: Minimum Viable Progress
 publish_date: 2024-04-04T00:00:00Z
 date: 2024-04-04T00:00:00Z
-preview_text:
+preview_text: There's a good chance you've heard of Minimum Viable Product - the concept of building a product just to the point where you can collect feedback from early users, to then continue iterating. I've been employing something else that's helped me a lot when it comes to working on personal goals and habit building, and I wanted to share that here.
 ---
 There's a good chance you've heard of Minimum Viable Product - the concept of building a product just to the point where you can collect feedback from early users, to then continue iterating. I've been employing something else that's helped me a lot when it comes to working on personal goals and habit building, and I wanted to share that here.
 

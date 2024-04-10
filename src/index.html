@@ -4,7 +4,7 @@ layout: layout.html
 {% for post in collections.post reversed %}
 <article>
     <a href="{{ post.url }}"><h2 class="roboto-bold">{{ post.data.title }}</h2></a>
-    <time>{{ post.data.publish_date }}</time>
+    <time>{{ post.data.publish_date | date: '%B %e, %Y' }}</time>
     <br/>
     <div class="top-margin-12">
         {{ post.data.preview_text }}
